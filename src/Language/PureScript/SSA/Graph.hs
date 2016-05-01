@@ -13,7 +13,7 @@ data Inst
   | ObjectInst [(String, Value)]
   | ConstructInst -- ???
 
-  | AccessInst Value String
+  | AccessInst String Value
   | ObjectUpdateInst Value [(String, Value)]
 
   -- lambdas???

@@ -33,9 +33,7 @@ propagateConstants''' (iID, i) = (iID,) <$>
 
     ObjectInst ps -> ObjectInst <$> mapM (\(p, v) -> (p,) <$> inject v) ps
 
-    AccessInst v p -> do
-      v' <- inject v
-      return $ AccessInst v' p
+    AccessInst p v -> AccessInst p <$> inject v
 
     ObjectUpdateInst v ps ->
       ObjectUpdateInst

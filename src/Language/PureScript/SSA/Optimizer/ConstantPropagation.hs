@@ -12,7 +12,7 @@ type Env = Map InstID Value
 
 type M = State Env
 
-propagateConstants :: [(BlockID, Block)] -> [(BlockID, Block)]
+propagateConstants :: CFG -> CFG
 propagateConstants bs = evalState (propagateConstants' bs) Map.empty
 
 propagateConstants' :: [(BlockID, Block)] -> M [(BlockID, Block)]

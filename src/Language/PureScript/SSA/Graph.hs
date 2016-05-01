@@ -1,5 +1,7 @@
 module Language.PureScript.SSA.Graph where
 
+type CFG = [(BlockID, Block)]
+
 newtype BlockID = BlockID Integer deriving (Eq, Ord)
 
 type Block = [(InstID, Inst)]

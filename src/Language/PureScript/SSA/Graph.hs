@@ -1,10 +1,10 @@
 module Language.PureScript.SSA.Graph where
 
-newtype BlockID = BlockID Int deriving (Eq, Ord)
+newtype BlockID = BlockID Integer deriving (Eq, Ord)
 
 type Block = [(InstID, Inst)]
 
-newtype InstID = InstID Int deriving (Eq, Ord)
+newtype InstID = InstID Integer deriving (Eq, Ord)
 
 data Inst
   = AliasInst Value
@@ -31,5 +31,5 @@ data Value
   | DoubleValue Double
   | StringValue String
   | CharValue Char
-  | BoolValue Bool
+  | BooleanValue Bool
   | InstValue InstID

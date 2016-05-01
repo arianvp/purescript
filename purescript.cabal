@@ -153,6 +153,7 @@ library
                      Language.PureScript.Pretty.Types
                      Language.PureScript.Pretty.Values
                      Language.PureScript.Renamer
+                     Language.PureScript.SSA.FromCoreFn
                      Language.PureScript.SSA.Graph
                      Language.PureScript.SSA.Optimizer.ConstantPropagation
                      Language.PureScript.Sugar

@@ -59,8 +59,8 @@ propagateConstants''' (iID, i) = (iID,) <$>
     IfInst c tID eID -> do
       c' <- inject c
       case c' of
-        BoolValue True  -> return $ GotoInst tID
-        BoolValue False -> return $ GotoInst eID
+        BooleanValue True  -> return $ GotoInst tID
+        BooleanValue False -> return $ GotoInst eID
         _ -> return $ IfInst c' tID eID
 
 inject :: Value -> M Value
